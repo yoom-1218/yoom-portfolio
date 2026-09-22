@@ -1,0 +1,382 @@
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Pretendard', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f8f9fc;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/* =========================
+   공통
+========================= */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.hero-text h2 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  color: #666;
+}
+
+.hero-img{
+    width:100%;
+    max-width:500px;
+    aspect-ratio:5/3;
+}
+
+.hero-img img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    background:#d9d9d9;
+    border-radius:20px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #4a6cf7;
+  color: #fff;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #3b5be0;
+}
+
+/* =========================
+   ABOUT
+========================= */
+.about-inner {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.profile{
+    width:120px;
+    aspect-ratio:1/1;
+}
+
+.profile img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    border-radius:50%;
+    background:#d9d9d9;
+}
+
+.about-text h3 {
+  text-align: left;
+}
+
+.tags {
+  margin: 15px 0;
+}
+
+.tags span {
+  display: inline-block;
+  background: #eef1ff;
+  color: #4a6cf7;
+  padding: 6px 12px;
+  margin-right: 8px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.timeline p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* =========================
+   SKILLS
+========================= */
+.skills {
+  text-align: center;
+}
+
+.skill-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h4 {
+    font-size: 1.2em;
+}
+
+/* =========================
+   PROJECT
+========================= */
+.project-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.project-card {
+  flex: 1;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.project-card img{
+    width:100%;
+    aspect-ratio:3/2;
+    display:block;
+    object-fit:cover;
+    background:#d9d9d9;
+    border-radius:12px;
+    margin-bottom:16px;
+}
+
+/* ==== 이미지 없는 상태 구분 ==== */
+.hero-img img,
+.profile img,
+.project-card img{
+    background:
+    repeating-linear-gradient(
+        45deg,
+        #e5e5e5,
+        #e5e5e5 10px,
+        #d9d9d9 10px,
+        #d9d9d9 20px
+    );
+}
+
+.project-card h4 {
+  padding: 15px 15px 5px;
+}
+
+.project-card p {
+  padding: 0 15px 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   CASE + CONTACT
+========================= */
+.case-contact-inner {
+  display: flex;
+  gap: 40px;
+}
+
+/* CASE */
+.case {
+  flex: 3;
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+
+.case-box {
+  padding: 25px;
+  background: #eef1ff;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.case-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.case-box.active {
+  background: #4a6cf7;
+  color: #fff;
+}
+
+/* CONTACT */
+.contact-box {
+  flex: 1;
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  height: fit-content;
+}
+
+.contact-box h3 {
+  text-align: left;
+}
+
+.contact-box ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.contact-box li {
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* =========================
+   CONTACT (하단)
+========================= */
+.contact {
+  text-align: center;
+}
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s ease;
+}
+
+.fade-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   반응형
+========================= */
+
+/* 태블릿 */
+@media (max-width: 1024px) {
+
+  .hero-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text h3 {
+    text-align: center;
+  }
+
+  .skill-grid {
+    flex-direction: column;
+  }
+
+  .project-grid {
+    flex-direction: column;
+  }
+
+  .case-contact-inner {
+    flex-direction: column;
+  }
+
+  .case-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 모바일 */
+@media (max-width: 600px) {
+
+  section {
+    padding: 60px 0;
+  }
+
+  .hero-text h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .case-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+}
