@@ -1,137 +1,496 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>포트폴리오 윤</title>
-  <link rel="stylesheet" href="../26_portfolio/css/style.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KYOOM · 김윤미 | 웹 퍼블리셔 · UI 디자이너</title>
+    <link rel="canonical" href="http://yoom1218.dothome.co.kr/ymportfolio/" />
+    <meta property="og:title" content="KYOOM · 김윤미 | 웹 퍼블리셔 · UI 디자이너" />
+    <meta
+      property="og:description"
+      content="기획 의도를 이해하고 UI 디자인부터 HTML·CSS·jQuery 퍼블리싱까지 연결하는 김윤미의 포트폴리오입니다."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://yoom1218.dothome.co.kr/ymportfolio/" />
+    <meta property="og:image" content="http://yoom1218.dothome.co.kr/ymportfolio/assets/hero.webp" />
 
-<!-- HEADER -->
-<header class="header">
-  <div class="container">
-    <h1>포트폴리오 윤</h1>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-inner">
-    <div class="hero-text">
-      <h2>Hello<br>I am<br>Younmi, Kim</h2>
-      <p class="hero-desc">포트폴리오윤은 기획부터 피그마 디자인, 웹퍼블리싱까지 한 번에 보여주는 올인원 포트폴리오입니다. 목표와 문제 정의, 정보 구조 설계, 피그마 UI디자인, 웹표준·반응형 구현 과정을
-담았으며, 이를 통해 기획력과 디자인 감각, 탄탄한 퍼블리싱 역량을 확인하실 수 있습니다.</p>
-      <a href="#" class="btn">View My Work</a>
-    </div>
-    <div class="hero-img">
-      <img src="" alt="">
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="about">
-  <div class="container about-inner">
-    <div class="profile">
-      <img src="" alt="">
-    </div>
-    <div class="about-text">
-      <h3>About Me</h3>
-      <p>간단한 소개 텍스트가 들어갑니다.</p>
-
-      <div class="tags">
-        <span>UX Planning</span>
-        <span>Figma Expert</span>
-        <span>Web Publishing</span>
+    <meta
+      name="description"
+      content="기획 의도를 이해하고 UI 디자인부터 HTML·CSS·jQuery 퍼블리싱까지 연결하는 김윤미의 포트폴리오입니다."
+    />
+    <meta name="theme-color" content="#215a49" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Plus+Jakarta+Sans:wght@400;700&display=swap"
+    />
+    <script src="js/vendor/jquery-3.6.0.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문 바로가기</a>
+    <!-- 상단 내비게이션 -->
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="site-header__logo" href="#home" aria-label="KYOOM 홈">KYOOM.</a
+        ><button
+          class="site-header__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+          aria-label="메뉴 열기"
+          hidden
+        >
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" id="primary-nav" aria-label="주요 메뉴">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="#work">Work</a></li>
+            <li><a class="nav__link" href="#publishing">Publishing</a></li>
+            <li><a class="nav__link" href="#about">About</a></li>
+            <li><a class="nav__link" href="#workflow">AI Workflow</a></li>
+            <li><a class="nav__link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
       </div>
+    </header>
+    <main id="main">
+      <!-- 메인 비주얼 -->
+      <section class="hero section" id="home" aria-labelledby="hero-title">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <p class="eyebrow">WEB PUBLISHER · UI DESIGNER</p>
+            <h1 class="hero__title" id="hero-title">
+              기획을 이해하고,<br /><span class="hero__line"
+                >화면으로 <span class="hero__last">완성합니다.</span></span
+              >
+            </h1>
+            <p class="hero__description">
+              기획 의도를 이해하고 UI 디자인부터<br />HTML·CSS·jQuery 구현까지 연결합니다.
+            </p>
+            <div class="actions">
+              <a class="button button--primary" href="#work">프로젝트 보기 ↗</a
+              ><a class="button button--outline" href="#career">경력 요약 보기</a>
+            </div>
+          </div>
+          <img
+            class="hero__image"
+            src="assets/hero.webp"
+            srcset="assets/hero-480.webp 480w, assets/hero-800.webp 800w, assets/hero.webp 1200w"
+            sizes="(min-width: 1440px) 508px, (min-width: 768px) calc(100vw - 80px), calc(100vw - 48px)"
+            alt="KYOOM 웹 퍼블리셔·UI 디자이너 타이포그래피"
+            width="1200"
+            height="800"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </div>
+      </section>
+      <!-- 경력 요약 -->
+      <section class="summary" aria-label="경력과 작업 방식 요약">
+        <dl class="container summary__grid">
+          <div class="summary__item">
+            <dt>4년 11개월</dt>
+            <dd>웹·앱 UI 디자인·웹 퍼블리싱</dd>
+          </div>
+          <div class="summary__item">
+            <dt>DESIGN + CODE</dt>
+            <dd>화면 설계부터 퍼블리싱까지</dd>
+          </div>
+          <div class="summary__item">
+            <dt>AI + JUDGMENT</dt>
+            <dd>검토는 빠르게, 결정은 직접</dd>
+          </div>
+        </dl>
+      </section>
+      <!-- 프로젝트 목록 -->
+      <section class="section section--white" id="work" aria-labelledby="work-title">
+        <div class="container">
+          <header class="section__header">
+            <p class="eyebrow">SELECTED WORK</p>
+            <h2 class="section__title"><span id="work-title">문제를 이해하고 완성한 화면</span></h2>
+          </header>
+          <div class="projects">
+            <article class="project-card reveal">
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="assets/calendar.webp"
+                  srcset="
+                    assets/calendar-480.webp  480w,
+                    assets/calendar-800.webp  800w,
+                    assets/calendar.webp     1400w
+                  "
+                  sizes="(min-width: 1440px) 624px, (min-width: 768px) calc(50vw - 52px), calc(100vw - 48px)"
+                  alt="호두 홈페이지 일정관리 핵심 화면"
+                  width="1400"
+                  height="834"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="project-card__body">
+                <p class="eyebrow">WEB DESIGN · PUBLISHING</p>
+                <h3 class="project-card__title">호두 홈페이지 리뉴얼</h3>
+                <p class="project-card__description">
+                  핵심 기능을 빠르게 이해하도록 화면과 소개 문구를 정리했습니다.
+                </p>
+                <p class="project-card__role">
+                  메인 비주얼 제외 디자인·문구·이미지 제작 / 웹 퍼블리싱
+                </p>
+                <ul class="tags" aria-label="사용 기술">
+                  <li class="tag">HTML</li>
+                  <li class="tag">CSS</li>
+                  <li class="tag">jQuery</li>
+                  <li class="tag">Photoshop</li>
+                </ul>
+                <div class="project-card__footer">
+                  <p>2022.01 · 실무 프로젝트</p>
+                  <a
+                    class="project-card__link"
+                    href="website.html"
+                    data-project="website"
+                    aria-haspopup="dialog"
+                    ><span class="sr-only">호두 홈페이지 리뉴얼 </span>프로젝트 요약 보기 ↗</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="project-card reveal">
+              <div class="project-card__media">
+                <img
+                  class="project-card__image"
+                  src="assets/chat-overview.webp"
+                  srcset="
+                    assets/chat-overview-480.webp  480w,
+                    assets/chat-overview-800.webp  800w,
+                    assets/chat-overview.webp     1320w
+                  "
+                  sizes="(min-width: 1440px) 624px, (min-width: 768px) calc(50vw - 52px), calc(100vw - 48px)"
+                  alt="호두 PC 채팅 대표 화면"
+                  width="1320"
+                  height="760"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="project-card__body">
+                <p class="eyebrow">UI DESIGN · WEB PUBLISHING</p>
+                <h3 class="project-card__title">호두 PC 채팅</h3>
+                <p class="project-card__description">
+                  웹·모바일의 채팅 경험을 PC 환경으로 확장했습니다.
+                </p>
+                <p class="project-card__role">PC 메신저 UI 디자인 / 웹 화면 퍼블리싱</p>
+                <ul class="tags" aria-label="사용 기술">
+                  <li class="tag">Figma</li>
+                  <li class="tag">HTML</li>
+                  <li class="tag">jQuery</li>
+                  <li class="tag">Photoshop</li>
+                </ul>
+                <div class="project-card__footer">
+                  <p>2025.07 · 실무 프로젝트</p>
+                  <a
+                    class="project-card__link"
+                    href="chat.html"
+                    data-project="chat"
+                    aria-haspopup="dialog"
+                    ><span class="sr-only">호두 PC 채팅 </span>프로젝트 요약 보기 ↗</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- 퍼블리싱 역량 -->
+      <section class="section" id="publishing">
+        <div class="container">
+          <header class="section__header">
+            <p class="eyebrow">PUBLISHING CAPABILITIES</p>
+            <h2 class="section__title">디자인을 실제 화면으로 구현하는 힘</h2>
+          </header>
+          <div class="features">
+            <article class="feature reveal">
+              <p class="eyebrow">01 / LAYOUT</p>
+              <h3 class="feature__title">반응형 레이아웃</h3>
+              <p>화면 크기에 맞는 구조와 콘텐츠 우선순위를 설계합니다.</p>
+            </article>
+            <article class="feature reveal">
+              <p class="eyebrow">02 / INTERACTION</p>
+              <h3 class="feature__title">인터랙션과 상태</h3>
+              <p>jQuery로 동작을 구현하고 입력·활성·비활성 상태를 정리합니다.</p>
+            </article>
+            <article class="feature reveal">
+              <p class="eyebrow">03 / STRUCTURE</p>
+              <h3 class="feature__title">구조와 유지보수</h3>
+              <p>HTML·CSS의 구조를 정리하고 반복 UI를 일관된 규칙으로 제작합니다.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- 자기소개 및 경력 -->
+      <section class="section section--white" id="about">
+        <div class="container">
+          <header class="section__header">
+            <p class="eyebrow">ABOUT ME</p>
+            <h2 class="section__title">더 나은 경험을 설계합니다.</h2>
+          </header>
+          <div class="about">
+            <div class="about__intro">
+              <h3>아이디어를 픽셀로 구현하는<br />디자이너 김윤미입니다.</h3>
+              <p class="about__description">
+                <span>
+                  편집·광고디자인을 바탕으로 웹·앱 UI 디자인과
+                  웹 퍼블리싱으로 작업 범위를 넓혀왔습니다.
+                </span>
+                <span>
+                  화면을 설계하고 디자인하며,
+                  실제로 사용할 수 있는 웹으로 완성합니다.
+                </span>
+              </p>
+            </div>
+            <dl class="skills">
+              <div>
+                <dt class="eyebrow">PUBLISHING</dt>
+                <dd>HTML · CSS · jQuery · 반응형 웹</dd>
+              </div>
+              <div>
+                <dt class="eyebrow">DESIGN</dt>
+                <dd>Figma · Photoshop · 웹·앱 UI</dd>
+              </div>
+              <div>
+                <dt class="eyebrow">PLANNING</dt>
+                <dd>요구사항 정리 · 화면 설계 · UX 검토</dd>
+              </div>
+            </dl>
+          </div>
+          <article class="career" id="career" aria-labelledby="career-title">
+            <h3 class="career__title" id="career-title">
+              총 디자인 경력 13년 10개월
+            </h3>
 
-      <div class="timeline">
-        <p>2021 - UI/UX Designer</p>
-        <p>2019 - Web Publisher</p>
+            <div class="career__list">
+              <!-- 회사별 경력 -->
+              <div class="career__item">
+                <h4 class="career__company">호두웨어</h4>
+                <p class="career__period">2021.01–2025.11 · 4년 11개월</p>
+                <p class="career__description">
+                  웹·앱 UI 디자인과 웹 퍼블리싱을 담당했습니다.
+                  기획자가 없는 상황에서는 필요한 화면 구성과 문구도 함께 정리했습니다.
+                </p>
+              </div>
+
+              <div class="career__item">
+                <h4 class="career__company">다모아기프트</h4>
+                <p class="career__period">2014.12–2020.01</p>
+                <p class="career__description">광고디자인</p>
+              </div>
+
+              <div class="career__item">
+                <h4 class="career__company">동우컴퍼니</h4>
+                <p class="career__period">2014.03–2014.09</p>
+                <p class="career__description">전단·현수막·리플릿 디자인</p>
+              </div>
+
+              <div class="career__item">
+                <h4 class="career__company">번개애드</h4>
+                <p class="career__period">2010.08–2012.02</p>
+                <p class="career__description">
+                  편집디자인·대리점 관리·인쇄 프로그램 교육
+                </p>
+              </div>
+
+              <div class="career__item">
+                <h4 class="career__company">CREE</h4>
+                <p class="career__period">2010.04–2010.07</p>
+                <p class="career__description">실사·편집디자인</p>
+              </div>
+
+              <div class="career__item">
+                <h4 class="career__company">번개애드(B&amp;I)</h4>
+                <p class="career__period">2008.08–2009.10</p>
+                <p class="career__description">
+                  편집디자인·수정 및 접수·대리점 관리
+                </p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <!-- AI 활용 과정 -->
+      <section class="section section--mint" id="workflow">
+        <div class="container">
+          <header class="section__header">
+            <p class="eyebrow">AI WORKFLOW</p>
+            <h2 class="section__title">AI는 검토를 돕고,<br />완성은 제가 책임집니다.</h2>
+          </header>
+          <div class="features">
+            <article class="feature reveal">
+              <p class="eyebrow">01 / AI SUPPORT</p>
+              <h3 class="feature__title">분석과 초안</h3>
+              <p>AI로 자료 조사, 요구사항 정리, 아이디어 확장과 문구 초안을 검토합니다.</p>
+            </article>
+            <article class="feature reveal">
+              <p class="eyebrow">02 / MY DECISION</p>
+              <h3 class="feature__title">판단과 수정</h3>
+              <p>사용자 맥락과 구현 조건을 기준으로 제안을 선택하고 직접 수정합니다.</p>
+            </article>
+            <article class="feature reveal">
+              <p class="eyebrow">03 / MY DELIVERY</p>
+              <h3 class="feature__title">제작과 검증</h3>
+              <p>Figma·Photoshop으로 디자인하고 HTML·CSS·jQuery로 구현·검증합니다.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- 연락처 -->
+      <section class="section contact" id="contact">
+        <div class="container">
+          <header class="section__header">
+            <p class="eyebrow">CONTACT</p>
+            <h2 class="section__title">함께 만들 다음 화면을<br />기다립니다.</h2>
+          </header>
+          <p class="contact__intro">웹 퍼블리싱을 중심으로 디자인과 기획을 함께 고민합니다.</p>
+          <dl class="contact__grid">
+            <div>
+              <dt class="eyebrow">EMAIL</dt>
+              <dd>
+                <a class="contact__value" href="mailto:rladbsal103@naver.com"
+                  >rladbsal103@naver.com</a
+                >
+                <div class="contact__actions">
+                  <a href="mailto:rladbsal103@naver.com">메일 보내기 ↗</a
+                  ><button type="button" data-copy="rladbsal103@naver.com">이메일 복사</button>
+                </div>
+              </dd>
+            </div>
+            <div>
+              <dt class="eyebrow">PHONE</dt>
+              <dd><a class="contact__phone" href="tel:01094546185">010-9454-6185 · 김윤미</a></dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+    </main>
+    <!-- 프로젝트 요약 모달 -->
+    <dialog class="modal" id="modal-website" aria-labelledby="modal-title-website">
+      <div class="modal__content">
+        <div class="modal__top">
+          <p class="eyebrow">WEB DESIGN · PUBLISHING</p>
+          <button
+            class="modal__close"
+            type="button"
+            aria-label="호두 홈페이지 리뉴얼 요약 닫기"
+            data-close
+          >
+            ×
+          </button>
+        </div>
+        <h2 class="modal__title" id="modal-title-website" tabindex="-1">호두 홈페이지 리뉴얼</h2>
+        <p class="modal__role">메인 비주얼 제외 디자인·문구·이미지 제작 / 웹 퍼블리싱</p>
+        <p class="modal__meta">2022.01 · 실무 프로젝트</p>
+        <img
+          class="modal__image"
+          src="assets/calendar.webp"
+          srcset="
+            assets/calendar-480.webp  480w,
+            assets/calendar-800.webp  800w,
+            assets/calendar.webp     1400w
+          "
+          sizes="(min-width: 880px) 736px, (min-width: 768px) calc(100vw - 144px), calc(100vw - 96px)"
+          alt=""
+          width="1400"
+          height="834"
+          loading="lazy"
+          decoding="async"
+        />
+        <section class="modal__section">
+          <h3>프로젝트 개요</h3>
+          <p>기존 메인 비주얼을 대부분 유지하고, 나머지 영역을 개편했습니다.</p>
+        </section>
+        <section class="modal__section">
+          <h3>문제 정의</h3>
+          <p>복잡한 앱 화면에서 핵심을 골라 기능을 짧고 명확하게 전달해야 했습니다.</p>
+        </section>
+        <section class="modal__section">
+          <h3>해결 과정</h3>
+          <p>핵심 기능이 드러나는 화면을 골라 편집하고, 탭별 소개 문구와 함께 구성했습니다.</p>
+        </section>
+        <section class="modal__section">
+          <h3>디자인 시스템</h3>
+          <p>
+            제목·본문·기능 소개 문구의 위계를 정리하고 반복되는 탭과 버튼을 일관되게 구성했습니다.
+          </p>
+        </section>
+        <section class="modal__section">
+          <h3>퍼블리싱 포인트</h3>
+          <p>HTML·CSS / 기능 소개 탭·슬라이더 / 모바일 메뉴 / 상단 이동</p>
+        </section>
+        <a class="button button--primary modal__cta" href="website.html">프로젝트 자세히 보기 ↗</a>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section class="skills">
-  <div class="container">
-    <h3>Skills</h3>
-    <div class="skill-grid">
-      <div class="card">
-        <h4>Design</h4>
-        <p>Figma (Design System)</p>
-        <p>사용자 경험 중심의 UI/UX 설계를 지향합니다.</p>
+    </dialog>
+    <!-- 프로젝트 요약 모달 -->
+    <dialog class="modal" id="modal-chat" aria-labelledby="modal-title-chat">
+      <div class="modal__content">
+        <div class="modal__top">
+          <p class="eyebrow">UI DESIGN · WEB PUBLISHING</p>
+          <button class="modal__close" type="button" aria-label="호두 PC 채팅 요약 닫기" data-close>
+            ×
+          </button>
+        </div>
+        <h2 class="modal__title" id="modal-title-chat" tabindex="-1">호두 PC 채팅</h2>
+        <p class="modal__role">PC 메신저 UI 디자인 / 웹 화면 퍼블리싱</p>
+        <p class="modal__meta">2025.07 · 실무 프로젝트</p>
+        <img
+          class="modal__image"
+          src="assets/chat-overview.webp"
+          srcset="
+            assets/chat-overview-480.webp  480w,
+            assets/chat-overview-800.webp  800w,
+            assets/chat-overview.webp     1320w
+          "
+          sizes="(min-width: 880px) 736px, (min-width: 768px) calc(100vw - 144px), calc(100vw - 96px)"
+          alt=""
+          width="1320"
+          height="760"
+          loading="lazy"
+          decoding="async"
+        />
+        <section class="modal__section">
+          <h3>프로젝트 개요</h3>
+          <p>
+            PC 메신저 UI를 디자인하고 웹 버전을 퍼블리싱했습니다. 윈도우 앱은 개발자가 구현했습니다.
+          </p>
+        </section>
+        <section class="modal__section">
+          <h3>문제 정의</h3>
+          <p>PC 환경에서 채팅 목록·대화·검색·공유 자료를 확인할 수 있는 화면이 필요했습니다.</p>
+        </section>
+        <section class="modal__section">
+          <h3>해결 과정</h3>
+          <p>채팅 목록과 대화 화면을 구성하고, 검색·파일함 및 스크롤·드래그 상태를 정리했습니다.</p>
+        </section>
+        <section class="modal__section">
+          <h3>디자인 시스템</h3>
+          <p>
+            메시지·시간·보낸 사람을 구분하고, 그룹·1:1 대화에서 반복되는 화면 구조를 통일했습니다.
+          </p>
+        </section>
+        <section class="modal__section">
+          <h3>퍼블리싱 포인트</h3>
+          <p>HTML·CSS·jQuery / 웹 화면 UI 구성 / 탭·검색창·팝업·메시지 입력 UI</p>
+        </section>
+        <a class="button button--primary modal__cta" href="chat.html">프로젝트 자세히 보기 ↗</a>
       </div>
-      <div class="card">
-        <h4>Publishing</h4>
-        <p>HTML / CSS / jQuery</p>
-        <p>웹 플랫폼에서 효과적인 콘텐츠를 게시하는 데 능숙합니다.</p>
-      </div>
-      <div class="card">
-        <h4>Planning</h4>
-        <p>User Flow / IA</p>
-        <p>사용자 중심의 플로우와 정보 구조를 설계합니다.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECT -->
-<section class="projects">
-  <div class="container">
-    <h3>Projects</h3>
-    <div class="project-grid">
-      <div class="project-card">
-        <img src="" alt="">
-        <h4>Project Title</h4>
-        <p>간단 설명</p>
-      </div>
-      <div class="project-card">
-        <img src="" alt="">
-        <h4>Project Title</h4>
-        <p>간단 설명</p>
-      </div>
-      <div class="project-card">
-        <img src="" alt="">
-        <h4>Project Title</h4>
-        <p>간단 설명</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CASE + CONTACT -->
-<section class="case-contact">
-  <div class="container case-contact-inner">
-
-    <!-- CASE STUDY -->
-    <div class="case">
-      <h3>Project Case Study</h3>
-      <div class="case-grid">
-        <div class="case-box">Overview</div>
-        <div class="case-box">Problem</div>
-        <div class="case-box">UX Process</div>
-        <div class="case-box">UI Design</div>
-        <div class="case-box">Results</div>
-      </div>
-    </div>
-
-    <!-- CONTACT -->
-    <div class="contact-box">
-      <h3>Get In Touch</h3>
-      <ul>
-        <li>📧 your@email.com</li>
-        <li>💻 github.com/yourname</li>
-        <li>📁 portfolio link</li>
-      </ul>
-    </div>
-
-  </div>
-</section>
-
-<script src="../26_portfolio/js/script.js"></script>
-
-</body>
+    </dialog>
+    <!-- 푸터 -->
+    <footer class="footer">
+      <div class="container"><p>KYOOM · WEB PUBLISHER &amp; UI DESIGNER</p></div>
+    </footer>
+    <p class="sr-only" id="live-status" role="status" aria-live="polite"></p>
+  </body>
 </html>
